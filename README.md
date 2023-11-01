@@ -1,9 +1,16 @@
 # grup-c
+Repositori ini dibuat untuk tugas mata kuliah Pemrograman Web Lanjut.
 
-Untuk menjalankan build tailwindcss
--> npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+## Menjalankan project
+Untuk menjalankan build tailwindcss (AdminPage), pada terminal, ketikan : 
+```
+npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+```
 
-Lalu, jalankan menggunakan Live Server (ekstension visual studio code)
+## Ekstension
+Ekstension yang dapat digunakan pada Visual Studio Code :
+* Live Server (untuk menjalankan website secara live)
+* Prettier (untuk merapihkan baris code program)
 
-Plugins yang digunakan adalah daisyUi. Untuk menggunakan komponen daisyUi (plugins)
--> https://daisyui.com/components/
+## Plugins
+Untuk plugins yang digunakan adalah [daisyUi](https://daisyui.com/components/), silakan mengunjungi website untuk info lebih lanjut.
