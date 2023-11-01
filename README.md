@@ -1,5 +1,5 @@
 # grup-c
-Repositori ini dibuat untuk tugas mata kuliah Pemrograman Web Lanjut.
+Repositori ini dibuat untuk tugas mata kuliah Pemrograman Web Lanjut (kelompok).
 
 ## Menjalankan project
 Untuk menjalankan build tailwindcss (AdminPage), pada terminal, ketikan : 
