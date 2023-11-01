@@ -14,3 +14,7 @@ Ekstension yang dapat digunakan pada Visual Studio Code :
 
 ## Plugins
 Untuk plugins yang digunakan adalah [daisyUi](https://daisyui.com/components/), silakan mengunjungi website untuk info lebih lanjut.
+Jika plugins tidak berjalan, ketikan pada terminal :
+```
+npm i -D daisyui@latest
+```
