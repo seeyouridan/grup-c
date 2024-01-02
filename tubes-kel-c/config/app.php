@@ -159,6 +159,8 @@ return [
         /*
          * Package Service Providers...
          */
+
+        // install spatie
         Spatie\Permission\PermissionServiceProvider::class,
 
         /*
