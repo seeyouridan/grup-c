@@ -16,6 +16,32 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
+
+                @hasrole('owner')
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('user.index')" :active="request()->routeIs('user.index')">
+                        {{ __('Data User') }}
+                    </x-nav-link>
+                </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('transaksi.index')" :active="request()->routeIs('transaksi.index')">
+                        {{ __('Transaksi') }}
+                    </x-nav-link>
+                </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('stok_barang.index')" :active="request()->routeIs('stok_barang.index')">
+                        {{ __('Stok Barang') }}
+                    </x-nav-link>
+                </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('cabang.index')" :active="request()->routeIs('cabang.index')">
+                        {{ __('Cabang') }}
+                    </x-nav-link>
+                </div>
+                @endhasrole
             </div>
 
             <!-- Settings Dropdown -->
@@ -42,8 +68,7 @@
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
 
-                            <x-dropdown-link :href="route('logout')"
-                                    onclick="event.preventDefault();
+                            <x-dropdown-link :href="route('logout')" onclick="event.preventDefault();
                                                 this.closest('form').submit();">
                                 {{ __('Log Out') }}
                             </x-dropdown-link>
@@ -88,8 +113,7 @@
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
 
-                    <x-responsive-nav-link :href="route('logout')"
-                            onclick="event.preventDefault();
+                    <x-responsive-nav-link :href="route('logout')" onclick="event.preventDefault();
                                         this.closest('form').submit();">
                         {{ __('Log Out') }}
                     </x-responsive-nav-link>
