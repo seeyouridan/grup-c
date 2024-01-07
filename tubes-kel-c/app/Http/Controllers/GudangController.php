@@ -67,7 +67,7 @@ class GudangController extends Controller
      * Show the form for editing the specified resource.
      */
     public function edit(string $id)
-    {   
+    {
 
         $barang = Barang::findOrFail($id);
         return view('gudang.edit', compact(['barang']));
@@ -79,7 +79,7 @@ class GudangController extends Controller
     public function update(Request $request, string $id)
     {
         $barang = Barang::findOrFail($id);
-        $barang->update($request->except(['_token','submit']));
+        $barang->update($request->except(['_token', 'submit']));
         return redirect()->route('gudang.index')->with('success', 'Data barang berhasil diupdate.');
     }
 
