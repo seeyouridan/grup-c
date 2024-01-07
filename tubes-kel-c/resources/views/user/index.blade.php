@@ -11,26 +11,26 @@
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                     <x-table>
                         <x-slot name="header">
-                            <tr class="text-justify">
-                                <th>No</th>
-                                <th>Nama</th>
-                                <th>Email</th>
-                                <th>Role</th>
+                            <tr class="text-left bg-gray-200 dark:bg-gray-700">
+                                <th class="px-4 py-2">#</th>
+                                <th class="px-4 py-2">Nama</th>
+                                <th class="px-4 py-2">Email</th>
+                                <th class="px-4 py-2">Role</th>
                             </tr>
                         </x-slot>
 
                         @php $num = 1; @endphp
                         @foreach ($users as $user)
-                        <tr class="text-justify">
-                            <td>{{ $num++ }} </td>
-                            <td>{{ $user->name }}</td>
-                            <td>{{ $user->email }}</td>
-                            <td>
-                                @foreach ($user->roles as $role)
-                                {{ $role->name }}
-                                @endforeach
-                            </td>
-                        </tr>
+                            <tr class="text-left hover:bg-gray-100 dark:hover:bg-gray-600 transition duration-150">
+                                <td class="px-4 py-2">{{ $num++ }}</td>
+                                <td class="px-4 py-2">{{ $user->name }}</td>
+                                <td class="px-4 py-2">{{ $user->email }}</td>
+                                <td class="px-4 py-2">
+                                    @foreach ($user->roles as $role)
+                                        {{ $role->name }}
+                                    @endforeach
+                                </td>
+                            </tr>
                         @endforeach
                     </x-table>
                 </div>

@@ -41,6 +41,8 @@
                             <x-select-input id="produk" name="produk_id" class="mt-1 block w-full" required>
                                 <option value="">Menu Pilihan</option>
                                 <option value="1" @if($barang->produk_id == "1") selected @endif>Asus</option>
+                                <option value="2" @if($barang->produk_id == "2") selected @endif>Razer</option>
+                                <option value="3" @if($barang->produk_id == "3") selected @endif>Fantech</option>
         
                             </x-select-input>
                         </div>
