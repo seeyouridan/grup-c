@@ -16,6 +16,7 @@
                     @endforeach
                     - Selamat datang {{ Auth::user()->name }}!
                     @endif
+                    
                 </div>
             </div>
         </div>
