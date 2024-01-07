@@ -42,6 +42,22 @@
                     </x-nav-link>
                 </div>
                 @endhasrole
+
+                @hasrole('kasir|supervisor')
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('transaksi.index')" :active="request()->routeIs('transaksi.index')">
+                        {{ __('Transaksi') }}
+                    </x-nav-link>
+                </div>
+                @endhasrole
+
+                @hasrole('gudang')
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('gudang.index')" :active="request()->routeIs('gudang.index')">
+                        {{ __('Data Gudang') }}
+                    </x-nav-link>
+                </div>
+                @endhasrole
             </div>
 
             <!-- Settings Dropdown -->
