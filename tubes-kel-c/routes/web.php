@@ -40,6 +40,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/gudang/create', [GudangController::class, 'create'])->name('gudang.create');
     Route::post('/gudang', [GudangController::class, 'store'])->name('gudang.store');
     Route::get('/gudang/{id}/edit', [GudangController::class, 'edit'])->name('gudang.edit');
+    Route::put('/gudang/{id}', [GudangController::class, 'edit'])->name('gudang.update');
     Route::match(['put', 'patch'], '/gudang/{id}', [GudangController::class, 'update'])->name('gudang.update');
     Route::delete('/gudang/{id}', [GudangController::class, 'destroy'])->name('gudang.destroy');
 
