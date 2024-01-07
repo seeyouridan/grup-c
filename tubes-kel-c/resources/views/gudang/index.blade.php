@@ -12,24 +12,24 @@
                     <x-table>
                         <x-slot name="header">
                             <tr class="text-justify">
-                                <th>No</th>
-                                <th>Kode Barang</th>
-                                <th>Nama Barang</th>
-                                <th>Stok</th>
-                                <th>Harga</th>
-                                <th>Produk</th>
+                                <th class="py-2">No</th>
+                                <th class="py-2">Kode Barang</th>
+                                <th class="py-2">Nama Barang</th>
+                                <th class="py-2">Stok</th>
+                                <th class="py-2">Harga</th>
+                                <th class="py-2">Produk</th>
                             </tr>
                         </x-slot>
 
                         @php $num = 1; @endphp
                         @foreach ($barangs as $barang)
                         <tr class="text-justify">
-                            <td>{{ $num++ }} </td>
-                            <td>{{ $barang->kode_barang }}</td>
-                            <td>{{ $barang->nama_barang }}</td>
-                            <td>{{ $barang->qty }}</td>
-                            <td>{{ $barang->harga }}</td>
-                            <td>{{ $barang->produk_id }} - {{ $barang->product->jenis_produk }}</td>
+                            <td class="py-2">{{ $num++ }} </td>
+                            <td class="py-2">{{ $barang->kode_barang }}</td>
+                            <td class="py-2">{{ $barang->nama_barang }}</td>
+                            <td class="py-2">{{ $barang->qty }}</td>
+                            <td class="py-2">{{ $barang->harga }}</td>
+                            <td class="py-2">{{ $barang->produk_id }} - {{ $barang->product->jenis_produk }}</td>
                         </tr>
                         @endforeach
                     </x-table>
