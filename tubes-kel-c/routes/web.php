@@ -47,10 +47,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/transaksi', [TransaksiController::class, 'index'])->name('transaksi.index');
 
     Route::get('/cabang', [CabangController::class, 'index'])->name('cabang.index');
+});
 
+Route::middleware('auth')->group(function () {
     Route::get('/pelanggan', [PelangganController::class, 'index'])->name('pelanggan.index');
     Route::get('/pelanggan/create', [PelangganController::class, 'create'])->name('pelanggan.create');
-    Route::get('/pelanggan', [PelangganController::class, 'create'])->name('pelanggan.store');
 });
 
 require __DIR__ . '/auth.php';
