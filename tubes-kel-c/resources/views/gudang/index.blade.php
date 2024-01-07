@@ -16,6 +16,7 @@
 
                     <x-table>
                         <x-slot name="header">
+<<<<<<< HEAD
                             <tr class="text-center">
                                 <th>No</th>
                                 <th>Kode Barang</th>
@@ -27,11 +28,21 @@
                                 @hasrole('gudang')
                                 <th>Aksi</th>
                                 @endhasrole
+=======
+                            <tr class="text-justify">
+                                <th class="py-2">No</th>
+                                <th class="py-2">Kode Barang</th>
+                                <th class="py-2">Nama Barang</th>
+                                <th class="py-2">Stok</th>
+                                <th class="py-2">Harga</th>
+                                <th class="py-2">Produk</th>
+>>>>>>> c1a14bf8b7adbf9dca7167aa1bfd0b3ea70d5aca
                             </tr>
                         </x-slot>
 
                         @php $num = 1; @endphp
                         @foreach ($barangs as $barang)
+<<<<<<< HEAD
                         <tr class="text-center">
                             <td>{{ $num++ }} </td>
                             <td>{{ $barang->kode_barang }}</td>
@@ -48,6 +59,15 @@
                                 </x-danger-button>
                             </td>
                             @endhasrole
+=======
+                        <tr class="text-justify">
+                            <td class="py-2">{{ $num++ }} </td>
+                            <td class="py-2">{{ $barang->kode_barang }}</td>
+                            <td class="py-2">{{ $barang->nama_barang }}</td>
+                            <td class="py-2">{{ $barang->qty }}</td>
+                            <td class="py-2">{{ $barang->harga }}</td>
+                            <td class="py-2">{{ $barang->produk_id }} - {{ $barang->product->jenis_produk }}</td>
+>>>>>>> c1a14bf8b7adbf9dca7167aa1bfd0b3ea70d5aca
                         </tr>
                         @endforeach
                     </x-table>
