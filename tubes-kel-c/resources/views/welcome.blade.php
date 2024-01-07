@@ -106,7 +106,7 @@
 
             <div class="pt-10 mt-16 px-0 sm:items-center sm:justify-between">
                 <p class="text-center font-semibold text-gray-600 hover:text-gray-700 dark:text-gray-800 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
-                    Group C - Tugas Besar matkul Pemrograman Web Dasar
+                    Group C - Tugas Besar matkul Pemrograman Web Lanjut
                 </p>
             </div>
         </div>
