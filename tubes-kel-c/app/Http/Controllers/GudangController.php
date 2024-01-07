@@ -85,18 +85,13 @@ class GudangController extends Controller
     public function update(Request $request, string $id)
     {
         $barang = Barang::findOrFail($id);
-<<<<<<< HEAD
         $barang->update($request->except(['_token', 'submit']));
-        return redirect()->route('gudang.index')->with('success', 'Data barang berhasil diupdate.');
-=======
-        $barang->update($request->except(['_token','submit']));
         $notificaton = array(
             'message' => 'Data barang berhasil diupdate',
             'alert-type' => 'warning'
 
         );
         return redirect()->route('gudang.index')->with($notificaton);
->>>>>>> 7b8ec1d0c17bb2df09b244f5fe33af9eaece6390
     }
 
     /**
