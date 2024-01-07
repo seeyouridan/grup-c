@@ -1,0 +1,5 @@
+Data diri mahasiswa
+
+Nama	: Muhammad Rafly Maulidan Nico Tenges
+Kelas	: IF B 2021
+NPM	: 5520121049
