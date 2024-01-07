@@ -70,7 +70,7 @@
                                 </x-secondary-button>
 
                                 <x-danger-button class="ml-3">
-                                    {{ __('Hapus!') }}
+                                    {{ __('Hapus !') }}
                                 </x-danger-button>
                             </div>
                         </form>
