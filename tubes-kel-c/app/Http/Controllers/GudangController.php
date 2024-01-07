@@ -34,7 +34,7 @@ class GudangController extends Controller
     {
         // Validasi input
         $request->validate([
-            'kode_barang' => 'required|string|max:255',
+            'kode_barang' => 'required|string|max:10',
             'nama_barang' => 'required|string|max:255',
             'qty' => 'required|integer',
             'harga' => 'required|numeric',
@@ -51,8 +51,14 @@ class GudangController extends Controller
             //Tambahkan kolom lain sesuai kebutuhan
         ]);
 
+        $notificaton = array(
+            'message' => 'Data barang berhasil disimpan',
+            'alert-type' => 'warning'
+
+        );
+
         // Redirect atau lakukan aksi lain setelah penyimpanan berhasil
-        return redirect()->route('gudang.index')->with('success', 'Data barang berhasil disimpan.');
+        return redirect()->route('gudang.index')->with($notificaton);
     }
 
     /**
@@ -79,8 +85,18 @@ class GudangController extends Controller
     public function update(Request $request, string $id)
     {
         $barang = Barang::findOrFail($id);
+<<<<<<< HEAD
         $barang->update($request->except(['_token', 'submit']));
         return redirect()->route('gudang.index')->with('success', 'Data barang berhasil diupdate.');
+=======
+        $barang->update($request->except(['_token','submit']));
+        $notificaton = array(
+            'message' => 'Data barang berhasil diupdate',
+            'alert-type' => 'warning'
+
+        );
+        return redirect()->route('gudang.index')->with($notificaton);
+>>>>>>> 7b8ec1d0c17bb2df09b244f5fe33af9eaece6390
     }
 
     /**
@@ -88,6 +104,13 @@ class GudangController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $barang = Barang::findOrFail($id);
+        $barang->delete();
+        $notificaton = array(
+            'message' => 'Buku telah berhasil dihapus',
+            'alert-type' => 'warning'
+        );
+
+        return redirect()->route('barang')->with($notificaton);
     }
 }

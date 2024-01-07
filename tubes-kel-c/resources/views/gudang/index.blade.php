@@ -44,7 +44,7 @@
                             <td class="py-2">
                                 <x-primary-button tag="a" href="{{ route('gudang.edit', $barang->id) }}">Edit</x-primary-button>
                                 <x-danger-button x-data="" @click.prevent="$dispatch('open-modal', 'confirm-book-deletion'); $dispatch('set-action', '{{ route('gudang.destroy', $barang->id) }}')">
-                                    {{ __('Delete') }}
+                                    {{ __('Hapus') }}
                                 </x-danger-button>
                             </td>
                             @endhasrole
@@ -55,7 +55,7 @@
                     <x-modal name="confirm-book-deletion" focusable maxWidth="xl">
                         <form method="post" x-bind:action="action" class="p-6">
                             @csrf
-                            @method("delete")
+                            @method('delete')
                             <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
                                 {{ __('Apakah anda yakin akan menghapus data Barang?') }}
                             </h2>
@@ -70,7 +70,7 @@
                                 </x-secondary-button>
 
                                 <x-danger-button class="ml-3">
-                                    {{ __('Delete!!!') }}
+                                    {{ __('Hapus!') }}
                                 </x-danger-button>
                             </div>
                         </form>

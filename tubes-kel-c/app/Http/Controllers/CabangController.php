@@ -61,6 +61,6 @@ class CabangController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        return view('HI123');
     }
 }
