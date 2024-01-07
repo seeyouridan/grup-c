@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Dashboard') }}
+            {{ __('Cabang') }}
         </h2>
     </x-slot>
 
@@ -23,15 +23,15 @@
                         </x-slot>
 
                         @php $num = 1; @endphp
-                        @foreach ($branches as $gudang)
+                        @foreach ($branches as $cabang)
                         <tr class="text-justify">
                             <td>{{ $num++ }} </td>
-                            <td>{{ $gudang->manajer_id }} - {{ $gudang->manajer->name }}</td>
-                            <td>{{ $gudang->nama_cabang }}</td>
-                            <td>{{ $gudang->alamat }}</td>
-                            <td>{{ $gudang->supervisor_id }} - {{ $gudang->supervisor->name }}</td>
-                            <td>{{ $gudang->kasir_id }} - {{ $gudang->kasir->name }}</td>
-                            <td>{{ $gudang->warehouse_id }} - {{ $gudang->warehouse->name }}</td>
+                            <td>{{ $cabang->manajer_id }} - {{ $cabang->manajer->name }}</td>
+                            <td>{{ $cabang->nama_cabang }}</td>
+                            <td>{{ $cabang->alamat }}</td>
+                            <td>{{ $cabang->supervisor_id }} - {{ $cabang->supervisor->name }}</td>
+                            <td>{{ $cabang->kasir_id }} - {{ $cabang->kasir->name }}</td>
+                            <td>{{ $cabang->warehouse_id }} - {{ $cabang->warehouse->name }}</td>
                         </tr>
                         @endforeach
                     </x-table>

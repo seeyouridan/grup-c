@@ -28,7 +28,7 @@ class CabangSeeder extends Seeder
                 [
                     'manajer_id' => 3,
                     'nama_cabang' => 'Cabang B',
-                    'alamat' => 'Bekasi',
+                    'alamat' => 'Jakarta',
                     'supervisor_id' => 8,
                     'kasir_id' => 13,
                     'warehouse_id' => 18,
@@ -48,7 +48,7 @@ class CabangSeeder extends Seeder
                 [
                     'manajer_id' => 5,
                     'nama_cabang' => 'Cabang D',
-                    'alamat' => 'Jakarta',
+                    'alamat' => 'Bekasi',
                     'supervisor_id' => 10,
                     'kasir_id' => 15,
                     'warehouse_id' => 20,

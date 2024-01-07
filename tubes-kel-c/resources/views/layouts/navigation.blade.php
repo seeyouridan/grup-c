@@ -17,7 +17,7 @@
                     </x-nav-link>
                 </div>
 
-                @hasrole('owner')
+                @hasrole('owner|manajer')
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('user.index')" :active="request()->routeIs('user.index')">
                         {{ __('Data User') }}
@@ -31,8 +31,8 @@
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('stok_barang.index')" :active="request()->routeIs('stok_barang.index')">
-                        {{ __('Stok Barang') }}
+                    <x-nav-link :href="route('gudang.index')" :active="request()->routeIs('gudang.index')">
+                        {{ __('Data Gudang') }}
                     </x-nav-link>
                 </div>
 

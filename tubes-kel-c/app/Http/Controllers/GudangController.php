@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Barang;
 use Illuminate\Http\Request;
 
 class GudangController extends Controller
@@ -11,7 +12,8 @@ class GudangController extends Controller
      */
     public function index()
     {
-        //
+        $data['barangs'] = Barang::with('product')->get();
+        return view('gudang.index', $data);
     }
 
     /**

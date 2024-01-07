@@ -1,8 +1,8 @@
 <?php
 
 use App\Http\Controllers\CabangController;
+use App\Http\Controllers\GudangController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\StockController;
 use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -34,17 +34,8 @@ Route::middleware('auth')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/user', [UserController::class, 'index'])->name('user.index');
-});
-
-Route::middleware('auth')->group(function () {
-    Route::get('/stok_barang', [StockController::class, 'index'])->name('stok_barang.index');
-});
-
-Route::middleware('auth')->group(function () {
+    Route::get('/gudang', [GudangController::class, 'index'])->name('gudang.index');
     Route::get('/transaksi', [TransaksiController::class, 'index'])->name('transaksi.index');
-});
-
-Route::middleware('auth')->group(function () {
     Route::get('/cabang', [CabangController::class, 'index'])->name('cabang.index');
 });
 

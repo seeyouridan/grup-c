@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            {{ __('Stok Barang') }}
+            {{ __('Data Barang') }}
         </h2>
     </x-slot>
 
@@ -16,6 +16,7 @@
                                 <th>Kode Barang</th>
                                 <th>Nama Barang</th>
                                 <th>Stok</th>
+                                <th>Harga</th>
                                 <th>Produk</th>
                             </tr>
                         </x-slot>
@@ -27,6 +28,7 @@
                             <td>{{ $barang->kode_barang }}</td>
                             <td>{{ $barang->nama_barang }}</td>
                             <td>{{ $barang->qty }}</td>
+                            <td>{{ $barang->harga }}</td>
                             <td>{{ $barang->produk_id }} - {{ $barang->product->jenis_produk }}</td>
                         </tr>
                         @endforeach
