@@ -6,14 +6,15 @@ use App\Models\Barang;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
-class GudangController extends Controller
+class PelangganController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $data['barangs'] = Barang::with('product')->get();
+        return view('pelanggan.index', $data);
     }
 
     /**
@@ -21,10 +22,9 @@ class GudangController extends Controller
      */
     public function create()
     {
-        $produk = ['products' => Product::pluck('jenis_produk', 'id')];
-        return view('gudang.create', $produk);
+        $data = ['products' => Product::pluck('jenis_produk', 'id')];
+        return view('gudang.create', $data);
     }
-
 
     /**
      * Store a newly created resource in storage.

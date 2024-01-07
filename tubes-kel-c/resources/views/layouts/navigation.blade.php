@@ -11,11 +11,13 @@
                 </div>
 
                 <!-- Navigation Links -->
+                @hasrole('owner|manajer|supervisor|gudang')
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
+                @endhasrole
 
                 @hasrole('owner|manajer')
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
@@ -53,8 +55,22 @@
 
                 @hasrole('gudang')
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('gudang.index')" :active="request()->routeIs('gudang.index')">
+                    <x-nav-link :href="route('gudang.index')" :active="request()->routeIs('gudang.index') || request()->routeIs('gudang.create')">
                         {{ __('Data Gudang') }}
+                    </x-nav-link>
+                </div>
+                @endhasrole
+
+                @hasrole('pelanggan')
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                        {{ __('Dashboard') }}
+                    </x-nav-link>
+                </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('pelanggan.index')" :active="request()->routeIs('pelanggan.index')">
+                        {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
                 @endhasrole
